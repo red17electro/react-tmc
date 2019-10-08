@@ -1,19 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './components/Popular'
+import Popular from './components/Popular';
 
 // Component
 // State
 // Lifecycle
 // UI 
 
+function isAuthed(){
+    return true;
+}
+
+function isNew(){
+    return true;
+}
+
 class App extends React.Component {
     render() {
-        return (
-            <h1>
-                Hello, world!
-            </h1>
-        )
+        const authed = isAuthed();
+        const name = 'Server';
+        const firstLogin = isNew();
+
+        return <div className="container"><Popular/></div>;
     }
 }
 
